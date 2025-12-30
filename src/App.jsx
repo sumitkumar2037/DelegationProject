@@ -1,25 +1,34 @@
 import React from "react";
 import Itinerary from "./page/Itinerary.jsx";
+import { useEffect } from "react";
 
 export default function App() {
-    const galleryImages = [
-      "/assets/gallery/gallery1.jpg",
-      "/assets/gallery/gallery2.jpg",
-      "/assets/gallery/gallery3.jpg",
-      "/assets/gallery/gallery4.jpg",
-      "/assets/gallery/gallery5.jpg",
-      "/assets/gallery/gallery6.jpg",
-      "/assets/gallery/gallery7.png",
-      "/assets/gallery/gallery8.jpg",
-    ];
+  useEffect(() => {
+    if (window.Tally) {
+      window.Tally.loadEmbeds();
+    }
+  }, []);
 
+  const galleryImages = [
+    "/dubai-delegation-2026/assets/gallery/gallery1.jpg",
+    "/dubai-delegation-2026/assets/gallery/gallery2.jpg",
+    "/dubai-delegation-2026/assets/gallery/gallery3.jpg",
+    "/dubai-delegation-2026/assets/gallery/gallery4.jpg",
+    "/dubai-delegation-2026/assets/gallery/gallery5.jpg",
+    "/dubai-delegation-2026/assets/gallery/gallery6.jpg",
+    "/dubai-delegation-2026/assets/gallery/gallery7.png",
+    "/dubai-delegation-2026/assets/gallery/gallery8.jpg",
+  ];
 
   return (
     <>
       {/* ================= HERO WITH VIDEO ================= */}
       <section className="hero">
         <video className="hero-video" autoPlay muted loop playsInline>
-          <source src="/assets/hero.mp4" type="video/mp4" />
+          <source
+            src="/dubai-delegation-2026/assets/hero.mp4"
+            type="video/mp4"
+          />
         </video>
 
         <div className="hero-overlay"></div>
@@ -123,7 +132,7 @@ export default function App() {
           ].map((logo, index) => (
             <div key={index} className="delegate-logo">
               <img
-                src={`/assets/gallery/past_delegates/${logo}`}
+                src={`/dubai-delegation-2026/assets/gallery/past_delegates/${logo}`}
                 alt={`Past Delegate ${index + 1}`}
               />
             </div>
@@ -132,22 +141,19 @@ export default function App() {
       </section>
 
       {/* ================= REGISTER ================= */}
-      <section id="register" className="register-section">
-        <h2 className="register-title">Register Now</h2>
-        <p className="register-subtitle">
-          Delegation Fee starts from INR 99K onwards*
-        </p>
-
-        <div className="register-form-wrapper">
-          {/* Tally Form Embed (Full Screen Form) */}
-          <script src="https://tally.so/widgets/embed.js"></script>
-          <div
-            className="tally-embed"
-            data-tally-src="https://tally.so/embed/mO0Z6p?alignLeft=1&hideTitle=0&transparentBackground=1"
-            data-tally-width="100%"
-            data-tally-height="1100"
-          ></div>
-        </div>
+      <section id="register" className="register-section gallery-section ">
+        <h2 className="section-title">
+          #11th DUBAI DELEGATION - Registration Form
+        </h2>
+        <iframe
+          src="https://tally.so/embed/mOxoek?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+          style={{
+            width: "100%",
+            height: "1500px",
+            border: "none",
+          }}
+          title="Register Form"
+        />
       </section>
 
       {/* ================= FOOTER ================= */}

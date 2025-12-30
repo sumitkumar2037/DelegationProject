@@ -5,14 +5,14 @@ const itinerary = [
   {
     tab: "Day 1",
     title: "Day 1",
-    image: "/assets/day1.jpg",
+    image: "/dubai-delegation-2026/assets/day1.jpeg",
     description: "Sharing Image (keeps the text as it is)",
     points: [],
   },
   {
     tab: "Day 2",
     title: "Day 2 – STEP Dubai, 14th Edition of Startup Festival in MENA",
-    image: "/assets/day2.jpg",
+    image: "/dubai-delegation-2026/assets/day2.jpeg",
     description:
       "The global stage opens. Exhibit, connect with delegates, and experience the biggest startup-tech platform.",
     points: [
@@ -29,7 +29,7 @@ const itinerary = [
     tab: "Day 3",
     title:
       "Day 3 – STEP Dubai, 14th Edition of Startup Festival in MENA (Continues)",
-    image: "/assets/day3.jpg",
+    image: "/dubai-delegation-2026/assets/day3.jpeg",
     description:
       "The global stage opens. Exhibit, connect with delegates, and experience the biggest startup-tech platform.",
     points: [
@@ -45,7 +45,7 @@ const itinerary = [
   {
     tab: "Day 4",
     title: "Day 4 – Wrap-Up & Return",
-    image: "/assets/day4.jpg",
+    image: "/dubai-delegation-2026/assets/day4.jpeg",
     description:
       "Conclude your journey with follow-ups, explore Dubai, and catch your return flight with big wins.",
     points: [
