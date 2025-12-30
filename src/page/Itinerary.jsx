@@ -4,14 +4,21 @@ import { useState } from "react";
 const itinerary = [
   {
     tab: "Day 1",
-    title: "Day 1",
+    title: "Dubai Konnect",
     image: "/dubai-delegation-2026/assets/day1.jpeg",
-    description: "Sharing Image (keeps the text as it is)",
-    points: [],
+    description:
+      "Kickstart the experience with Dubai Konnect — filled with startup showcases, partner intros, and networking.",
+    points: [
+      "Attend Launchpad Middle-East",
+      "Engage in partner & investor introductions",
+      "Present your startup to the community",
+      "One-on-one networking sessions",
+      "Evening networking followed by dinner",
+    ],
   },
   {
     tab: "Day 2",
-    title: "Day 2 – STEP Dubai, 14th Edition of Startup Festival in MENA",
+    title: "STEP Dubai, 14th Edition of Startup Festival in MENA",
     image: "/dubai-delegation-2026/assets/day2.jpeg",
     description:
       "The global stage opens. Exhibit, connect with delegates, and experience the biggest startup-tech platform.",
@@ -28,7 +35,7 @@ const itinerary = [
   {
     tab: "Day 3",
     title:
-      "Day 3 – STEP Dubai, 14th Edition of Startup Festival in MENA (Continues)",
+      "STEP Dubai, 14th Edition of Startup Festival in MENA (Continues)",
     image: "/dubai-delegation-2026/assets/day3.jpeg",
     description:
       "The global stage opens. Exhibit, connect with delegates, and experience the biggest startup-tech platform.",
@@ -44,7 +51,7 @@ const itinerary = [
   },
   {
     tab: "Day 4",
-    title: "Day 4 – Wrap-Up & Return",
+    title: "Wrap-Up & Return",
     image: "/dubai-delegation-2026/assets/day4.jpeg",
     description:
       "Conclude your journey with follow-ups, explore Dubai, and catch your return flight with big wins.",

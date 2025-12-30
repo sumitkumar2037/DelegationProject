@@ -47,7 +47,6 @@ export default function App() {
           </a>
         </div>
       </section>
-
       {/* ================= ABOUT STEP ================= */}
       <section className="section white">
         <div className="container">
@@ -80,16 +79,13 @@ export default function App() {
           </div>
         </div>
       </section>
-
       {/* ================= WHAT YOU GET ================= */}
       {/* <section className="section dark">
         <h2 className="center white-text">WHAT YOU GET</h2>
         {/* you can add content later */}
       {/* </section>  */}
-
       {/* ================= ITINERARY (YOUR 4-DAY COMPONENT) ================= */}
       <Itinerary />
-
       {/* ================= GALLERY ================= */}
       <section className="gallery-section">
         <h2 className="section-title">GALLERY</h2>
@@ -102,7 +98,6 @@ export default function App() {
           ))}
         </div>
       </section>
-
       {/* ================= PAST DELEGATES ================= */}
       <section className="section white past-delegates">
         <h2 className="center">PAST DELEGATES</h2>
@@ -139,7 +134,23 @@ export default function App() {
           ))}
         </div>
       </section>
-
+      {/* ================= ABOUT THE VENUE ================= */}{" "}
+      <section className="container">
+        {" "}
+        <div className="card">
+          {" "}
+          <h3>About The Venue</h3>{" "}
+          <p>
+            {" "}
+            Dubai Internet City is nestled within the bustling metropolis of
+            Dubai, a city known for its modern architecture, luxurious
+            lifestyle, and rich cultural heritage. Its strategic location offers
+            easy access to major transportation hubs, making it a convenient hub
+            for international businesses and entrepreneurs.{" "}
+          </p>{" "}
+        </div>{" "}
+         
+      </section>
       {/* ================= REGISTER ================= */}
       <section id="register" className="register-section gallery-section ">
         <h2 className="section-title">
@@ -155,7 +166,6 @@ export default function App() {
           title="Register Form"
         />
       </section>
-
       {/* ================= FOOTER ================= */}
       <footer className="custom-footer">
         <div className="footer-top">
