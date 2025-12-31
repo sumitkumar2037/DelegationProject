@@ -1,6 +1,15 @@
 import React from "react";
 import Itinerary from "./page/Itinerary.jsx";
 import { useEffect } from "react";
+import OurStory from "./page/OurStory.jsx";
+import ExpandNorthStar from "./components/ExpandNorthstar.jsx";
+import DubaiKonnect from "./components/DubaiKonnect.jsx";
+import WhatYouGet from "./components/WhatYouGet.jsx";
+import Hero from "./components/Hero.jsx";
+import DubaiDelegationForm from "./components/DelegationForm.jsx";
+import AboutVenue from "./components/AboutVenue.jsx";
+import EarlyBirdTimer from "./components/EarlyBirdTimer.jsx";
+import ConnectWithUs from "./components/ConnectWithUs.jsx";
 
 export default function App() {
   useEffect(() => {
@@ -23,79 +32,24 @@ export default function App() {
   return (
     <>
       {/* ================= HERO WITH VIDEO ================= */}
-      <section className="hero">
-        <video className="hero-video" autoPlay muted loop playsInline>
-          <source
-            src="/dubai-delegation-2026/assets/hero.mp4"
-            type="video/mp4"
-          />
-        </video>
-
-        <div className="hero-overlay"></div>
-
-        <div className="hero-text">
-          <h1>
-            11th INDIAN STARTUP
-            <br />
-            DELEGATION TO DUBAI
-          </h1>
-
-          <p className="hero-date">February 10–13, 2026</p>
-
-          <a href="#register" className="hero-btn">
-            I AM INTERESTED
-          </a>
-        </div>
-      </section>
-      {/* ================= ABOUT STEP ================= */}
-      <section className="section white">
-        <div className="container">
-          <p className="about-text">
-            Step Dubai 2026 marks the 14th edition of the festival – bringing
-            together thousands of founders, investors, creatives, and tech
-            enthusiasts from around the world. Under the theme{" "}
-            <strong>“Intelligence Everywhere: The AI Economy”</strong>, Step
-            explores how artificial intelligence is transforming business,
-            finance, technology, and creativity.
-          </p>
-
-          <div className="stats-row">
-            <div>
-              <h3>8000+</h3>
-              <span>Attendees</span>
-            </div>
-            <div>
-              <h3>400+</h3>
-              <span>Startups</span>
-            </div>
-            <div>
-              <h3>100+</h3>
-              <span>Companies</span>
-            </div>
-            <div>
-              <h3>$9B</h3>
-              <span>Funding Present</span>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* ================= WHAT YOU GET ================= */}
-      {/* <section className="section dark">
-        <h2 className="center white-text">WHAT YOU GET</h2>
-        {/* you can add content later */}
-      {/* </section>  */}
-      {/* ================= ITINERARY (YOUR 4-DAY COMPONENT) ================= */}
+      <Hero />
+      <EarlyBirdTimer />
+      <ExpandNorthStar />
+      <DubaiKonnect />
+      <WhatYouGet />
       <Itinerary />
       {/* ================= GALLERY ================= */}
-      <section className="gallery-section">
-        <h2 className="section-title">GALLERY</h2>
-
-        <div className="gallery-grid">
-          {galleryImages.map((img, index) => (
-            <div className="gallery-item" key={index}>
-              <img src={img} alt={`Gallery ${index + 1}`} />
-            </div>
-          ))}
+      <section className="bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6 py-8">
+          {" "}
+          <h2 className="section-title">GALLERY</h2>
+          <div className="gallery-grid ">
+            {galleryImages.map((img, index) => (
+              <div className="gallery-item" key={index}>
+                <img src={img} alt={`Gallery ${index + 1}`} />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
       {/* ================= PAST DELEGATES ================= */}
@@ -134,28 +88,11 @@ export default function App() {
           ))}
         </div>
       </section>
-      {/* ================= ABOUT THE VENUE ================= */}{" "}
-      <section className="container">
-        {" "}
-        <div className="card">
-          {" "}
-          <h3>About The Venue</h3>{" "}
-          <p>
-            {" "}
-            Dubai Internet City is nestled within the bustling metropolis of
-            Dubai, a city known for its modern architecture, luxurious
-            lifestyle, and rich cultural heritage. Its strategic location offers
-            easy access to major transportation hubs, making it a convenient hub
-            for international businesses and entrepreneurs.{" "}
-          </p>{" "}
-        </div>{" "}
-         
-      </section>
+      <AboutVenue />
+
       {/* ================= REGISTER ================= */}
-      <section id="register" className="register-section gallery-section ">
-        <h2 className="section-title">
-          #11th DUBAI DELEGATION - Registration Form
-        </h2>
+      <section id="register" className="max-w-7xl mx-auto px-6 py-16">
+        <h2 className="section-title">Register Here</h2>
         <iframe
           src="https://tally.so/embed/mOxoek?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
           style={{
@@ -166,8 +103,10 @@ export default function App() {
           title="Register Form"
         />
       </section>
+      <ConnectWithUs />
+      {/* <DubaiDelegationForm /> */}
       {/* ================= FOOTER ================= */}
-      <footer className="custom-footer">
+      {/* <footer className="custom-footer">
         <div className="footer-top">
           <div className="footer-brand">
             <h3>StartupNews.fyi</h3>
@@ -225,7 +164,7 @@ export default function App() {
           © 2025 StartupNews.fyi | DOTFYI Media Ventures Private Limited. All
           Rights Reserved.
         </div>
-      </footer>
+      </footer> */}
     </>
   );
 }

@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   margin: 0;
   padding: 0;
@@ -116,117 +120,11 @@ body {
   font-size: 32px;
   margin-bottom: 6px;
 }
-/* ================= ITINERARY SECTION ================= */
-.itinerary-section {
-  max-width: 1200px;
-  margin: 80px auto;
-  padding: 0 20px;
-}
-
-.itinerary-title {
-  text-align: center;
-  font-size: 34px;
-  font-weight: 500;
-  margin-bottom: 30px;
-}
-
-.itinerary-title span {
-  display: block;
-  font-size: 18px;
-  color: #666;
-  margin-top: 6px;
-}
-
-/* ================= TABS ================= */
-.itinerary-tabs {
-  display: flex;
-  background: #2e148c;
-  border-radius: 14px;
-  overflow: hidden;
-  margin-bottom: 30px;
-}
-
-.itinerary-tab {
-  flex: 1;
-  padding: 18px 0;
-  border: none;
-  background: transparent;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.itinerary-tab:hover {
-  background: rgba(255, 255, 255, 0.12);
-}
-
-.itinerary-tab.active {
-  background: #14004b;
-}
-
-/* ================= CONTENT CARD ================= */
-.itinerary-body {
-  display: flex;
-  gap: 40px;
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 18px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-}
-
-/* IMAGE LEFT */
-.itinerary-image {
-  flex: 1;
-}
-
-.itinerary-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 14px;
-}
-
-/* TEXT RIGHT */
-.itinerary-content {
-  flex: 1;
-}
-
-.itinerary-content h3 {
-  font-size: 24px;
-  margin-bottom: 12px;
-}
-
-.itinerary-content p {
-  font-size: 16px;
-  color: #555;
-  line-height: 1.6;
-  margin-bottom: 16px;
-}
-
-.itinerary-content ul {
-  padding-left: 20px;
-}
-
-.itinerary-content li {
-  margin-bottom: 10px;
-  font-size: 15px;
-  color: #333;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 900px) {
-  .itinerary-body {
-    flex-direction: column;
-  }
-}
 
 /* ===== GALLERY ===== */
 .gallery-section {
-  padding: 80px 20px;
-  max-width: 1300px;
-
+  padding: 40px 20px;
+  /* max-width: 1300px; */
   margin: auto;
 }
 
@@ -234,7 +132,7 @@ body {
   text-align: center;
   font-size: 36px;
   letter-spacing: 2px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .gallery-grid {
@@ -260,12 +158,6 @@ body {
 @media (max-width: 1024px) {
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .gallery-grid {
-    grid-template-columns: 1fr;
   }
 }
 
@@ -413,49 +305,47 @@ body {
 /* ================= ABOUT THE VENUE ================= */
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
 }
 
 .container .card {
-    background: #ffffff;
-    border-radius: 16px;
-    padding: 48px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 48px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .container .card h3 {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #111;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #111;
 }
 
 .container .card p {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #444;
-    max-width: 900px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+  max-width: 900px;
 }
-
-
 
 /* Responsive */
 @media (max-width: 768px) {
-    .container {
-        padding: 60px 16px;
-    }
+  .container {
+    padding: 60px 16px;
+  }
 
-    .container .card {
-        padding: 32px 24px;
-    }
+  .container .card {
+    padding: 32px 24px;
+  }
 
-    .container .card h3 {
-        font-size: 26px;
-    }
+  .container .card h3 {
+    font-size: 26px;
+  }
 
-    .container .card p {
-        font-size: 15px;
-    }
+  .container .card p {
+    font-size: 15px;
+  }
 }

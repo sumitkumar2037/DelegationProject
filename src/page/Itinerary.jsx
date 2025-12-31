@@ -1,11 +1,10 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const itinerary = [
   {
     tab: "Day 1",
     title: "Dubai Konnect",
-    image: "/dubai-delegation-2026/assets/day1.jpeg",
+    image: "https://startupnews.fyi/wp-content/uploads/2025/12/day1.jpeg",
     description:
       "Kickstart the experience with Dubai Konnect — filled with startup showcases, partner intros, and networking.",
     points: [
@@ -19,7 +18,7 @@ const itinerary = [
   {
     tab: "Day 2",
     title: "STEP Dubai, 14th Edition of Startup Festival in MENA",
-    image: "/dubai-delegation-2026/assets/day2.jpeg",
+    image: "https://startupnews.fyi/wp-content/uploads/2025/12/day2.jpeg",
     description:
       "The global stage opens. Exhibit, connect with delegates, and experience the biggest startup-tech platform.",
     points: [
@@ -34,9 +33,8 @@ const itinerary = [
   },
   {
     tab: "Day 3",
-    title:
-      "STEP Dubai, 14th Edition of Startup Festival in MENA (Continues)",
-    image: "/dubai-delegation-2026/assets/day3.jpeg",
+    title: "STEP Dubai, 14th Edition of Startup Festival in MENA (Continues)",
+    image: "https://startupnews.fyi/wp-content/uploads/2025/12/day3.jpeg",
     description:
       "The global stage opens. Exhibit, connect with delegates, and experience the biggest startup-tech platform.",
     points: [
@@ -52,7 +50,7 @@ const itinerary = [
   {
     tab: "Day 4",
     title: "Wrap-Up & Return",
-    image: "/dubai-delegation-2026/assets/day4.jpeg",
+    image: "https://startupnews.fyi/wp-content/uploads/2025/12/day4.jpeg",
     description:
       "Conclude your journey with follow-ups, explore Dubai, and catch your return flight with big wins.",
     points: [
@@ -69,41 +67,61 @@ export default function Itinerary() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="itinerary-section">
-      <h2 className="itinerary-title">
-        Itinerary <span>10–13 February, 2026</span>
+    <section className="max-w-7xl mx-auto mt-20 mb-4 px-5">
+      {/* ================= TITLE ================= */}
+      <h2 className="text-center text-[34px] font-bold mb-8">
+        Delegation Plan
+        <span className="block text-lg text-gray-500 mt-1">
+          10–13 February, 2026
+        </span>
       </h2>
 
-      {/* Tabs */}
-      <div className="itinerary-tabs">
+      {/* ================= TABS ================= */}
+      <div className="flex bg-black rounded-2xl overflow-hidden mb-8 p-1 shadow-lg">
         {itinerary.map((day, index) => (
           <button
             key={index}
-            className={`itinerary-tab ${active === index ? "active" : ""}`}
             onClick={() => setActive(index)}
+            className={`
+        flex-1 py-3 text-sm md:text-base font-semibold rounded-xl transition-all duration-300
+        ${
+          active === index
+            ? "bg-green-500 text-black shadow-md"
+            : "text-green-100 hover:bg-green-800 hover:text-white"
+        }
+      `}
           >
             {day.tab}
           </button>
         ))}
       </div>
 
-      {/* Content */}
-      <div className="itinerary-body">
-        <div className="itinerary-image">
-          <img src={itinerary[active].image} alt={itinerary[active].tab} />
+      {/* ================= CONTENT CARD ================= */}
+      <div className="flex flex-col lg:flex-row gap-10 bg-white p-8 rounded-[18px] shadow-[0_12px_30px_rgba(0,0,0,0.08)]">
+        {/* IMAGE */}
+        <div className="flex-1">
+          <img
+            src={itinerary[active].image}
+            alt={itinerary[active].tab}
+            className="w-full h-full object-cover rounded-[14px]"
+          />
         </div>
 
-        <div className="itinerary-content">
-          <h3>{itinerary[active].title}</h3>
-          <p>{itinerary[active].description}</p>
+        {/* TEXT */}
+        <div className="flex-1">
+          <h3 className="text-2xl mb-3">{itinerary[active].title}</h3>
 
-          {itinerary[active].points.length > 0 && (
-            <ul>
-              {itinerary[active].points.map((item, i) => (
-                <li key={i}>{item}</li>
-              ))}
-            </ul>
-          )}
+          <p className="text-base text-gray-600 leading-relaxed mb-4">
+            {itinerary[active].description}
+          </p>
+
+          <ul className="pl-5 list-disc">
+            {itinerary[active].points.map((item, i) => (
+              <li key={i} className="mb-2 text-[15px] text-gray-800">
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>
