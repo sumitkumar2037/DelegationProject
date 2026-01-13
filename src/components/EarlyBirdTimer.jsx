@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 export default function EarlyBirdTimer() {
-  // 5 Jan 2026, 00:00 IST
-  const targetDate = new Date("2026-01-05T00:00:00+05:30").getTime();
+  // 17 Jan 2026, 12:00 IST
+  const targetDate = new Date("2026-01-17T12:00:00+05:30").getTime();
 
   const [timeLeft, setTimeLeft] = useState(getTimeLeft());
 
